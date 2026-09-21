@@ -22,7 +22,27 @@ function loadTodos() {
 
 function addTodoToList(task) {
   const todoItem = document.createElement("li");
-  todoItem.textContent = task;
+  const todoText = document.createElement("span");
+  const deleteButton = document.createElement("button");
+
+  todoText.textContent = task;
+  deleteButton.type = "button";
+  deleteButton.className = "delete-button";
+  deleteButton.textContent = "删除";
+
+  deleteButton.addEventListener("click", () => {
+    const taskIndex = Array.from(todoList.children).indexOf(todoItem);
+
+    if (taskIndex === -1) {
+      return;
+    }
+
+    todos.splice(taskIndex, 1);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+    todoItem.remove();
+  });
+
+  todoItem.append(todoText, deleteButton);
   todoList.append(todoItem);
 }
 

@@ -66,9 +66,33 @@ h1 {
 }
 
 .todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding: 12px 0;
   border-bottom: 1px solid #e5e7eb;
+}
+
+.todo-list li span {
+  min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.delete-button {
+  flex: none;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #b91c1c;
+  background: #fee2e2;
+  cursor: pointer;
+  font: inherit;
+}
+
+.delete-button:hover {
+  color: #ffffff;
+  background: #dc2626;
 }
 
 .sr-only {
