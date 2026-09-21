@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo 清单</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="todo-app">
+    <h1>Todo 清单</h1>
+
+    <form id="todo-form" class="todo-form">
+      <label class="sr-only" for="todo-input">输入任务</label>
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="请输入任务"
+        autocomplete="off"
+      >
+      <button type="submit">添加</button>
+    </form>
+
+    <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
