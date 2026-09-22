@@ -79,6 +79,32 @@ h1 {
   overflow-wrap: anywhere;
 }
 
+.todo-list li.completed span {
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.todo-actions {
+  display: flex;
+  flex: none;
+  gap: 8px;
+}
+
+.complete-button {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #166534;
+  background: #dcfce7;
+  cursor: pointer;
+  font: inherit;
+}
+
+.complete-button:hover {
+  color: #ffffff;
+  background: #15803d;
+}
+
 .delete-button {
   flex: none;
   padding: 6px 10px;
